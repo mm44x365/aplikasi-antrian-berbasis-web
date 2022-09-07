@@ -18,9 +18,6 @@ $loket = $_GET['loket'];
             <div class="ms-5 ms-md-0 pt-md-3 pb-md-0">
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <!-- <li class="breadcrumb-item"><a href="http://www.indrasatya.com/"><i class="bi-house-fill text-success"></i></a></li>
-                        <li class="breadcrumb-item" aria-current="page">Dashboard</li>
-                        <li class="breadcrumb-item" aria-current="page">Antrian</li> -->
                         <a href="<?= $base_url ?>" class="btn btn-success btn-sm" style="margin-right: 5px;"><i class=" bi-house-door-fill"> Home</i></a>
                         <?php
                         switch ($loket) {
@@ -31,8 +28,8 @@ $loket = $_GET['loket'];
                                 echo "<a href='" . $base_url . "/panggil.php?loket=1' class='btn btn-success btn-sm' style='margin-right: 5px;'><i class='bi-arrow-left-right'> Pindah Loket 1</i></a>";
                                 break;
                         }
-
                         ?>
+                        <a class="btn btn-warning btn-sm" style="margin-right: 5px;" onclick="deleteData()"><i class=" bi-trash"> Clear Database</i></a>
                     </ol>
                 </nav>
             </div>
